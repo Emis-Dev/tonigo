@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Tonigo — leer zelf je smartphone repareren. Stap-voor-stap gidsen voor scherm, batterij, laadpoort en meer. iPhone & Android." />
+<title>Tonigo · Leer zelf je telefoon repareren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="#" class="logo">
+      <span class="logo__mark"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+      <span class="logo__text">Tonigo</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#guides">Gidsen</a>
+      <a href="#tools">Gereedschap</a>
+      <a href="#academy">Academy</a>
+      <a href="#community">Community</a>
+    </nav>
+    <a href="#guides" class="btn btn--primary btn--small">
+      Start <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container hero__inner">
+    <div class="badge">
+      <i class="fa-solid fa-bolt"></i> Open kennisbank · Geen abonnement
+    </div>
+    <h1>Leer zelf je telefoon repareren.<br/><span class="grad">Bespaar geld, red toestellen.</span></h1>
+    <p class="lead">Tonigo is een gratis leerplatform met heldere stap-voor-stap gidsen, video's en tools. Voor iedereen die liever zelf sleutelt dan vervangt.</p>
+    <div class="hero__cta">
+      <a href="#guides" class="btn btn--primary">
+        <i class="fa-solid fa-book-open"></i> Bekijk gidsen
+      </a>
+      <a href="#academy" class="btn btn--ghost">
+        <i class="fa-solid fa-graduation-cap"></i> Start Academy
+      </a>
+    </div>
+    <ul class="hero__stats">
+      <li><strong>120+</strong><span>reparatiegidsen</span></li>
+      <li><strong>iPhone &amp; Android</strong><span>alle merken</span></li>
+      <li><strong>4 niveaus</strong><span>van starter tot expert</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="features container">
+  <div class="features__grid">
+    <article class="feat">
+      <span class="feat__icon"><i class="fa-solid fa-list-check"></i></span>
+      <h3>Stap-voor-stap</h3>
+      <p>Genummerde stappen met foto's, gereedschapslijst en geschatte tijd. Niets overgeslagen.</p>
+    </article>
+    <article class="feat">
+      <span class="feat__icon"><i class="fa-solid fa-circle-exclamation"></i></span>
+      <h3>Veiligheid voorop</h3>
+      <p>Lithium batterijen, ESD, lijmverwarming — elke gids start met de risico's en hoe je ze vermijdt.</p>
+    </article>
+    <article class="feat">
+      <span class="feat__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <h3>Diagnose-eerst</h3>
+      <p>Onze Probleemwijzer vraagt symptomen en stuurt je naar de meest waarschijnlijke oorzaak.</p>
+    </article>
+    <article class="feat">
+      <span class="feat__icon"><i class="fa-solid fa-rotate"></i></span>
+      <h3>Reversibel</h3>
+      <p>Bij elke stap leer je hoe je terug kan zonder schade. Geen "point of no return" zonder waarschuwing.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ DIAGNOSE ============ -->
+<section class="diag" id="diag">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="fa-solid fa-stethoscope"></i> Probleemwijzer</span>
+      <h2>Wat is er mis met je toestel?</h2>
+      <p>Selecteer een symptoom en we tonen de meest waarschijnlijke oorzaken &amp; gidsen.</p>
+    </div>
+    <div class="diag__chips" id="diagChips">
+      <button class="chip" data-symptom="scherm-stuk"><i class="fa-solid fa-mobile-screen"></i> Gebroken scherm</button>
+      <button class="chip" data-symptom="batterij-leeg"><i class="fa-solid fa-battery-quarter"></i> Batterij snel leeg</button>
+      <button class="chip" data-symptom="laden-lukt-niet"><i class="fa-solid fa-plug"></i> Laadt niet</button>
+      <button class="chip" data-symptom="water"><i class="fa-solid fa-droplet"></i> Waterschade</button>
+      <button class="chip" data-symptom="oververhit"><i class="fa-solid fa-temperature-high"></i> Oververhit</button>
+      <button class="chip" data-symptom="geen-geluid"><i class="fa-solid fa-volume-xmark"></i> Geen geluid</button>
+      <button class="chip" data-symptom="knop-stuk"><i class="fa-solid fa-circle-xmark"></i> Knop reageert niet</button>
+      <button class="chip" data-symptom="camera"><i class="fa-solid fa-camera"></i> Wazige camera</button>
+    </div>
+    <div class="diag__result" id="diagResult" hidden>
+      <h3 id="diagTitle"></h3>
+      <p id="diagBody"></p>
+      <div id="diagLinks" class="diag__links"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUIDES ============ -->
+<section class="guides" id="guides">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="fa-solid fa-book"></i> Reparatiegidsen</span>
+      <h2>Populairste gidsen</h2>
+      <p>De reparaties die het vaakst nodig zijn — door beginners volledig haalbaar mits je rustig werkt.</p>
+    </div>
+
+    <div class="guides__filter">
+      <button class="filter active" data-filter="all">Alle</button>
+      <button class="filter" data-filter="iphone">iPhone</button>
+      <button class="filter" data-filter="samsung">Samsung</button>
+      <button class="filter" data-filter="other">Andere Android</button>
+      <button class="filter" data-filter="beginner">Beginner</button>
+      <button class="filter" data-filter="advanced">Gevorderd</button>
+    </div>
+
+    <div class="guides__grid" id="guidesGrid">
+      <!-- iPhone screen -->
+      <article class="card" data-tags="iphone beginner">
+        <div class="card__media card__media--screen">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="tag tag--easy">Beginner</span>
+            <span class="card__time"><i class="fa-regular fa-clock"></i> 45 min</span>
+          </div>
+          <h3>iPhone scherm vervangen</h3>
+          <p>Voor iPhone 11 t/m 15. Inclusief Face ID transfer en juiste schroef-mapping.</p>
+          <a href="#" class="card__link" data-guide="iphone-screen">
+            Lees gids <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- iPhone battery -->
+      <article class="card" data-tags="iphone beginner">
+        <div class="card__media card__media--battery">
+          <i class="fa-solid fa-battery-full"></i>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="tag tag--easy">Beginner</span>
+            <span class="card__time"><i class="fa-regular fa-clock"></i> 30 min</span>
+          </div>
+          <h3>iPhone batterij vervangen</h3>
+          <p>Lijmstrips correct verwijderen, BMS-chip transfer en kalibratie nadien.</p>
+          <a href="#" class="card__link" data-guide="iphone-battery">
+            Lees gids <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Samsung screen -->
+      <article class="card" data-tags="samsung advanced">
+        <div class="card__media card__media--screen">
+          <i class="fa-solid fa-display"></i>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="tag tag--hard">Gevorderd</span>
+            <span class="card__time"><i class="fa-regular fa-clock"></i> 75 min</span>
+          </div>
+          <h3>Samsung Galaxy scherm vervangen</h3>
+          <p>Achterglas verhitten, motherboard-vrij werken en nieuw OLED-paneel uitlijnen.</p>
+          <a href="#" class="card__link" data-guide="samsung-screen">
+            Lees gids <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Charge port -->
+      <article class="card" data-tags="iphone other beginner">
+        <div class="card__media card__media--port">
+          <i class="fa-solid fa-plug-circle-bolt"></i>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="tag tag--easy">Beginner</span>
+            <span class="card__time"><i class="fa-regular fa-clock"></i> 25 min</span>
+          </div>
+          <h3>Laadpoort reinigen of vervangen</h3>
+          <p>90% van "laadt niet" is vuil. Eerst reinigen, dan pas vervangen — leer beide.</p>
+          <a href="#" class="card__link" data-guide="charge-port">
+            Lees gids <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Water -->
+      <article class="card" data-tags="iphone samsung other beginner">
+        <div class="card__media card__media--water">
+          <i class="fa-solid fa-water"></i>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="tag tag--easy">Beginner</span>
+            <span class="card__time"><i class="fa-regular fa-clock"></i> 60 min</span>
+          </div>
+          <h3>Waterschade — eerste hulp</h3>
+          <p>Wat je in de eerste 30 minuten moet doen (en wat absoluut niet).</p>
+          <a href="#" class="card__link" data-guide="water-damage">
+            Lees gids <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Speaker -->
+      <article class="card" data-tags="iphone samsung beginner">
+        <div class="card__media card__media--speaker">
+          <i class="fa-solid fa-volume-high"></i>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="tag tag--easy">Beginner</span>
+            <span class="card__time"><i class="fa-regular fa-clock"></i> 20 min</span>
+          </div>
+          <h3>Luidspreker rooster reinigen</h3>
+          <p>Met perslucht, isopropanol en een zachte borstel — geen tandenstoker, alsjeblieft.</p>
+          <a href="#" class="card__link" data-guide="speaker-clean">
+            Lees gids <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Buttons -->
+      <article class="card" data-tags="iphone samsung other advanced">
+        <div class="card__media card__media--button">
+          <i class="fa-solid fa-circle-dot"></i>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="tag tag--mid">Gemiddeld</span>
+            <span class="card__time"><i class="fa-regular fa-clock"></i> 50 min</span>
+          </div>
+          <h3>Power- of volumeknop herstellen</h3>
+          <p>Vaak vlex-kabel defect, soms gewoon een vastgeplakt mechanisme.</p>
+          <a href="#" class="card__link" data-guide="buttons">
+            Lees gids <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Camera -->
+      <article class="card" data-tags="iphone samsung beginner">
+        <div class="card__media card__media--camera">
+          <i class="fa-solid fa-camera-retro"></i>
+        </div>
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="tag tag--easy">Beginner</span>
+            <span class="card__time"><i class="fa-regular fa-clock"></i> 35 min</span>
+          </div>
+          <h3>Camera lens vervangen</h3>
+          <p>Het glaasje sneuvelt vaker dan de sensor. Grote prijsbesparing als je dat onderscheidt.</p>
+          <a href="#" class="card__link" data-guide="camera-lens">
+            Lees gids <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLS ============ -->
+<section class="tools" id="tools">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="fa-solid fa-toolbox"></i> Gereedschap</span>
+      <h2>Wat heb je nodig om te starten?</h2>
+      <p>Een goede starter-kit kost minder dan één scherm-reparatie bij een winkel.</p>
+    </div>
+    <div class="tools__grid">
+      <div class="tool"><i class="fa-solid fa-screwdriver"></i><strong>Precisie schroevendraaier</strong><span>Pentalobe, Phillips #000, Torx T2</span></div>
+      <div class="tool"><i class="fa-solid fa-circle-half-stroke"></i><strong>Plastic openers</strong><span>Spudger, plectrums, zuignap</span></div>
+      <div class="tool"><i class="fa-solid fa-fire"></i><strong>Verwarmingsmat of föhn</strong><span>Voor lijm te zachten — max 80°C</span></div>
+      <div class="tool"><i class="fa-solid fa-bolt-lightning"></i><strong>ESD-polsband</strong><span>Voorkomt dat statische elektriciteit chips killt</span></div>
+      <div class="tool"><i class="fa-solid fa-magnet"></i><strong>Magnetische schroef-mat</strong><span>Onmisbaar als je schroeven wilt terugvinden</span></div>
+      <div class="tool"><i class="fa-solid fa-eye"></i><strong>Goede verlichting + loep</strong><span>50% van het werk is gewoon kunnen zien</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACADEMY ============ -->
+<section class="academy" id="academy">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> Academy</span>
+      <h2>Volg een leerpad, geen losse video's</h2>
+      <p>Vier niveaus, elk met theorie, oefenmodule en certificaat.</p>
+    </div>
+    <div class="path">
+      <div class="path__step">
+        <span class="path__num">01</span>
+        <h3>Starter</h3>
+        <p>Schroeven, ESD, screwmap, batterijveiligheid. 2 uur.</p>
+      </div>
+      <div class="path__step">
+        <span class="path__num">02</span>
+        <h3>Scherm &amp; Batterij</h3>
+        <p>De twee meest voorkomende ingrepen. 4 uur.</p>
+      </div>
+      <div class="path__step">
+        <span class="path__num">03</span>
+        <h3>Diagnose</h3>
+        <p>Logboard checks, multimeter, isolatie van defecten. 6 uur.</p>
+      </div>
+      <div class="path__step">
+        <span class="path__num">04</span>
+        <h3>Microsoldeer</h3>
+        <p>SMD chips, hot air, fluxen. Voor wie er écht in wil. 10 uur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section class="community" id="community">
+  <div class="container community__inner">
+    <div>
+      <span class="eyebrow"><i class="fa-solid fa-users"></i> Community</span>
+      <h2>Vastgelopen? Vraag het de community.</h2>
+      <p>Forum met ervaren reparateurs, antwoord meestal binnen het uur. Volledig gratis, geen reclame.</p>
+      <a href="#" class="btn btn--primary"><i class="fa-solid fa-comments"></i> Naar het forum</a>
+    </div>
+    <div class="community__card">
+      <div class="community__row">
+        <i class="fa-solid fa-comment-dots"></i>
+        <div>
+          <strong>Mijn iPhone 12 batterij geeft 80% maar valt soms uit</strong>
+          <span>Beantwoord · 12 reacties · vandaag</span>
+        </div>
+      </div>
+      <div class="community__row">
+        <i class="fa-solid fa-comment-dots"></i>
+        <div>
+          <strong>Welke flux gebruiken jullie voor reflow?</strong>
+          <span>Beantwoord · 7 reacties · gisteren</span>
+        </div>
+      </div>
+      <div class="community__row">
+        <i class="fa-solid fa-comment-dots"></i>
+        <div>
+          <strong>Samsung S22 raakt warm bij laden — diagnose?</strong>
+          <span>Open · 3 reacties · 2 dagen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container cta__inner">
+    <h2>Begin vandaag — gratis, voor altijd.</h2>
+    <p>Geen account nodig. Open een gids en je bent vertrokken.</p>
+    <a href="#guides" class="btn btn--primary btn--large">
+      <i class="fa-solid fa-rocket"></i> Open de eerste gids
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#" class="logo">
+        <span class="logo__mark"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+        <span class="logo__text">Tonigo</span>
+      </a>
+      <p>Open kennisbank voor smartphone reparatie. Gemaakt door makers, voor makers.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Leer</h4>
+        <a href="#guides">Gidsen</a>
+        <a href="#academy">Academy</a>
+        <a href="#tools">Gereedschap</a>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <a href="#community">Forum</a>
+        <a href="#">Discord</a>
+        <a href="#">Contributeurs</a>
+      </div>
+      <div>
+        <h4>Over</h4>
+        <a href="#">Manifest</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom container">
+    <span>© <span id="year"></span> Tonigo</span>
+    <span>Repareer in plaats van vervangen.</span>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
