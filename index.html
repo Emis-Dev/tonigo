@@ -16,7 +16,7 @@
 <!-- ============ NAV ============ -->
 <header class="nav">
   <div class="container nav__inner">
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       <span class="logo__mark"><i class="fa-solid fa-screwdriver-wrench"></i></span>
       <span class="logo__text">Tonigo</span>
     </a>
@@ -36,24 +36,48 @@
 <section class="hero">
   <div class="hero__bg"></div>
   <div class="container hero__inner">
-    <div class="badge">
-      <i class="fa-solid fa-bolt"></i> Open kennisbank · Geen abonnement
+    <div class="hero__copy reveal">
+      <div class="badge">
+        <i class="fa-solid fa-bolt"></i> Open kennisbank · Geen abonnement
+      </div>
+      <h1>Leer zelf je telefoon repareren.<br/><span class="grad">Bespaar geld, red toestellen.</span></h1>
+      <p class="lead">Tonigo is een gratis leerplatform met heldere stap-voor-stap gidsen, video's en tools. Voor iedereen die liever zelf sleutelt dan vervangt.</p>
+      <div class="hero__cta">
+        <a href="#guides" class="btn btn--primary">
+          <i class="fa-solid fa-book-open"></i> Bekijk gidsen
+        </a>
+        <a href="#academy" class="btn btn--ghost">
+          <i class="fa-solid fa-graduation-cap"></i> Start Academy
+        </a>
+      </div>
+      <ul class="hero__stats">
+        <li><strong>8</strong><span>praktische gidsen</span></li>
+        <li><strong>iPhone &amp; Android</strong><span>veelvoorkomende reparaties</span></li>
+        <li><strong>4 niveaus</strong><span>van starter tot expert</span></li>
+      </ul>
     </div>
-    <h1>Leer zelf je telefoon repareren.<br/><span class="grad">Bespaar geld, red toestellen.</span></h1>
-    <p class="lead">Tonigo is een gratis leerplatform met heldere stap-voor-stap gidsen, video's en tools. Voor iedereen die liever zelf sleutelt dan vervangt.</p>
-    <div class="hero__cta">
-      <a href="#guides" class="btn btn--primary">
-        <i class="fa-solid fa-book-open"></i> Bekijk gidsen
-      </a>
-      <a href="#academy" class="btn btn--ghost">
-        <i class="fa-solid fa-graduation-cap"></i> Start Academy
-      </a>
+    <div class="repair-stage reveal" aria-hidden="true" data-depth>
+      <div class="repair-stage__halo"></div>
+      <div class="repair-stage__mat">
+        <span class="mat-line mat-line--one"></span>
+        <span class="mat-line mat-line--two"></span>
+        <span class="mat-dot mat-dot--one"></span>
+        <span class="mat-dot mat-dot--two"></span>
+      </div>
+      <div class="phone-exploded layer" data-speed="-0.08">
+        <div class="phone-panel phone-panel--back"></div>
+        <div class="phone-panel phone-panel--board">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="phone-panel phone-panel--battery"></div>
+        <div class="phone-panel phone-panel--screen"></div>
+      </div>
+      <div class="tool-float tool-float--driver layer" data-speed="0.13"><i class="fa-solid fa-screwdriver"></i></div>
+      <div class="tool-float tool-float--pick layer" data-speed="0.18"><i class="fa-solid fa-guitar"></i></div>
+      <div class="tool-float tool-float--bolt layer" data-speed="0.1"><i class="fa-solid fa-bolt"></i></div>
+      <div class="micro-copy micro-copy--top layer" data-speed="0.06">ESD safe</div>
+      <div class="micro-copy micro-copy--bottom layer" data-speed="-0.04">screw map 01</div>
     </div>
-    <ul class="hero__stats">
-      <li><strong>120+</strong><span>reparatiegidsen</span></li>
-      <li><strong>iPhone &amp; Android</strong><span>alle merken</span></li>
-      <li><strong>4 niveaus</strong><span>van starter tot expert</span></li>
-    </ul>
   </div>
 </section>
 
@@ -129,7 +153,7 @@
 
     <div class="guides__grid" id="guidesGrid">
       <!-- iPhone screen -->
-      <article class="card" data-tags="iphone beginner">
+      <article class="card reveal" data-tags="iphone beginner">
         <div class="card__media card__media--screen">
           <i class="fa-solid fa-mobile-screen-button"></i>
         </div>
@@ -140,14 +164,14 @@
           </div>
           <h3>iPhone scherm vervangen</h3>
           <p>Voor iPhone 11 t/m 15. Inclusief Face ID transfer en juiste schroef-mapping.</p>
-          <a href="#" class="card__link" data-guide="iphone-screen">
+          <a href="guides/iphone-scherm-vervangen.html" class="card__link" data-guide="iphone-screen">
             Lees gids <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
 
       <!-- iPhone battery -->
-      <article class="card" data-tags="iphone beginner">
+      <article class="card reveal" data-tags="iphone beginner">
         <div class="card__media card__media--battery">
           <i class="fa-solid fa-battery-full"></i>
         </div>
@@ -158,14 +182,14 @@
           </div>
           <h3>iPhone batterij vervangen</h3>
           <p>Lijmstrips correct verwijderen, BMS-chip transfer en kalibratie nadien.</p>
-          <a href="#" class="card__link" data-guide="iphone-battery">
+          <a href="guides/iphone-batterij-vervangen.html" class="card__link" data-guide="iphone-battery">
             Lees gids <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
 
       <!-- Samsung screen -->
-      <article class="card" data-tags="samsung advanced">
+      <article class="card reveal" data-tags="samsung advanced">
         <div class="card__media card__media--screen">
           <i class="fa-solid fa-display"></i>
         </div>
@@ -176,14 +200,14 @@
           </div>
           <h3>Samsung Galaxy scherm vervangen</h3>
           <p>Achterglas verhitten, motherboard-vrij werken en nieuw OLED-paneel uitlijnen.</p>
-          <a href="#" class="card__link" data-guide="samsung-screen">
+          <a href="guides/samsung-galaxy-scherm-vervangen.html" class="card__link" data-guide="samsung-screen">
             Lees gids <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
 
       <!-- Charge port -->
-      <article class="card" data-tags="iphone other beginner">
+      <article class="card reveal" data-tags="iphone other beginner">
         <div class="card__media card__media--port">
           <i class="fa-solid fa-plug-circle-bolt"></i>
         </div>
@@ -194,14 +218,14 @@
           </div>
           <h3>Laadpoort reinigen of vervangen</h3>
           <p>90% van "laadt niet" is vuil. Eerst reinigen, dan pas vervangen — leer beide.</p>
-          <a href="#" class="card__link" data-guide="charge-port">
+          <a href="guides/laadpoort-reinigen-of-vervangen.html" class="card__link" data-guide="charge-port">
             Lees gids <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
 
       <!-- Water -->
-      <article class="card" data-tags="iphone samsung other beginner">
+      <article class="card reveal" data-tags="iphone samsung other beginner">
         <div class="card__media card__media--water">
           <i class="fa-solid fa-water"></i>
         </div>
@@ -212,14 +236,14 @@
           </div>
           <h3>Waterschade — eerste hulp</h3>
           <p>Wat je in de eerste 30 minuten moet doen (en wat absoluut niet).</p>
-          <a href="#" class="card__link" data-guide="water-damage">
+          <a href="guides/waterschade-eerste-hulp.html" class="card__link" data-guide="water-damage">
             Lees gids <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
 
       <!-- Speaker -->
-      <article class="card" data-tags="iphone samsung beginner">
+      <article class="card reveal" data-tags="iphone samsung beginner">
         <div class="card__media card__media--speaker">
           <i class="fa-solid fa-volume-high"></i>
         </div>
@@ -230,14 +254,14 @@
           </div>
           <h3>Luidspreker rooster reinigen</h3>
           <p>Met perslucht, isopropanol en een zachte borstel — geen tandenstoker, alsjeblieft.</p>
-          <a href="#" class="card__link" data-guide="speaker-clean">
+          <a href="guides/luidspreker-rooster-reinigen.html" class="card__link" data-guide="speaker-clean">
             Lees gids <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
 
       <!-- Buttons -->
-      <article class="card" data-tags="iphone samsung other advanced">
+      <article class="card reveal" data-tags="iphone samsung other advanced">
         <div class="card__media card__media--button">
           <i class="fa-solid fa-circle-dot"></i>
         </div>
@@ -248,14 +272,14 @@
           </div>
           <h3>Power- of volumeknop herstellen</h3>
           <p>Vaak vlex-kabel defect, soms gewoon een vastgeplakt mechanisme.</p>
-          <a href="#" class="card__link" data-guide="buttons">
+          <a href="guides/power-of-volumeknop-herstellen.html" class="card__link" data-guide="buttons">
             Lees gids <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
 
       <!-- Camera -->
-      <article class="card" data-tags="iphone samsung beginner">
+      <article class="card reveal" data-tags="iphone samsung beginner">
         <div class="card__media card__media--camera">
           <i class="fa-solid fa-camera-retro"></i>
         </div>
@@ -266,7 +290,7 @@
           </div>
           <h3>Camera lens vervangen</h3>
           <p>Het glaasje sneuvelt vaker dan de sensor. Grote prijsbesparing als je dat onderscheidt.</p>
-          <a href="#" class="card__link" data-guide="camera-lens">
+          <a href="guides/camera-lens-vervangen.html" class="card__link" data-guide="camera-lens">
             Lees gids <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -334,7 +358,7 @@
       <span class="eyebrow"><i class="fa-solid fa-users"></i> Community</span>
       <h2>Vastgelopen? Vraag het de community.</h2>
       <p>Forum met ervaren reparateurs, antwoord meestal binnen het uur. Volledig gratis, geen reclame.</p>
-      <a href="#" class="btn btn--primary"><i class="fa-solid fa-comments"></i> Naar het forum</a>
+      <a href="#community" class="btn btn--primary"><i class="fa-solid fa-comments"></i> Bekijk communityvragen</a>
     </div>
     <div class="community__card">
       <div class="community__row">
@@ -377,7 +401,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <a href="#" class="logo">
+    <a href="index.html" class="logo">
         <span class="logo__mark"><i class="fa-solid fa-screwdriver-wrench"></i></span>
         <span class="logo__text">Tonigo</span>
       </a>
@@ -393,14 +417,14 @@
       <div>
         <h4>Community</h4>
         <a href="#community">Forum</a>
-        <a href="#">Discord</a>
-        <a href="#">Contributeurs</a>
+        <a href="#community">Vragen</a>
+        <a href="#academy">Leerpad</a>
       </div>
       <div>
         <h4>Over</h4>
-        <a href="#">Manifest</a>
-        <a href="#">Privacy</a>
-        <a href="#">Contact</a>
+        <a href="README.md">Manifest</a>
+        <a href="#tools">Starter-kit</a>
+        <a href="#diag">Probleemwijzer</a>
       </div>
     </div>
   </div>
